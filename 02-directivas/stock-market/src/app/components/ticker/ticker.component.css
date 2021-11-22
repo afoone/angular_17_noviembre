@@ -1,0 +1,34 @@
+.stock-item {
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+  border-radius: 4px;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+.stock-name {
+  color: darkblue;
+}
+
+.stock-code {
+  font-size: 2rem;
+  color: brown;
+}
+
+.stock-item .subiendo {
+  color: green
+}
+
+.stock-item .bajando {
+  color: red;
+}
+
+.stock-item .cambio-fuerte {
+  font-weight: bold;
+}
+
+.stock-price {
+ font-size: 1.5rem;
+
+}

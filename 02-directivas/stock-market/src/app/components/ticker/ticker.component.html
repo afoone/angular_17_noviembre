@@ -1,0 +1,21 @@
+<ng-template #fav><div>*</div></ng-template>
+    <!-- [style]="stock.price>stock.previousPrice ? 'color: blue': 'color: red' " -->
+
+
+<div class="stock-item">
+  <div class="stock-name">{{stock.name}}</div>
+  <div class="stock-code">{{stock.code}}</div>
+  <div class="stock-price"
+    [ngStyle]="{
+      'color': stock.price > stock.previousPrice ? 'green': 'red',
+      'font-weight': stock.price - stock.previousPrice > 5 ? 'bold': ''
+    }"
+    >{{stock.price}} €</div>
+  <!-- <button (click)="setFavorite()" [disabled]="stock.favorite">Add to favorites</button> -->
+
+  <button (click)="setFavorite()" *ngIf="!stock.favorite else fav">Add to favorites</button>
+  <!-- <button (click)="setFavorite()" [style]="stock.favorite ?'display: none':''">Add to favorites</button> -->
+
+
+  <!-- <div *ngIf="stock.favorite">*</div> -->
+</div>
