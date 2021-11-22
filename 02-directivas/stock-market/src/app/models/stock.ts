@@ -3,7 +3,6 @@ export class Stock {
   public code: string; // TEL
   public price: number;
   public previousPrice: number;
-  public favorite: boolean
 
   constructor(
     name: string,
@@ -15,9 +14,15 @@ export class Stock {
     this.code = code;
     this.price = price;
     this.previousPrice = previousPrice;
-    this.favorite = false
   }
 
+  isSubiendo() {
+    return this.price > this.previousPrice
+  }
+
+  isCambioFuerte() {
+    return Math.abs(this.price - this.previousPrice) > 2;
+  }
 
 }
 

@@ -1,21 +1,51 @@
 <ng-template #fav><div>*</div></ng-template>
-    <!-- [style]="stock.price>stock.previousPrice ? 'color: blue': 'color: red' " -->
+<!-- [style]="stock.price>stock.previousPrice ? 'color: blue': 'color: red' " -->
+
+<!-- <div class="stock-item">hola mundo 2</div> -->
+<div class="stock-list">
+  <div class="stock-item" *ngFor="let stock of stocks; index as i">
+    <div class="stock-name">{{i}}-{{ stock.name }}</div>
+    <div class="stock-code">{{ stock.code }}</div>
+    <div
+      [class.subiendo]="stock.isSubiendo()"
+      [class.bajando]="!stock.isSubiendo()"
+      class="stock-price"
+      [class.cambio-fuerte]="stock.isCambioFuerte()"
+    >
+      {{ stock.price }} €
+    </div>
+
+    <!-- <button (click)="setFavorite()" [disabled]="stock.favorite">Add to favorites</button> -->
+
+    <button *ngIf="!favorites[i] else fav" (click)="setFavorite(i)" >Add to favorites</button>
+
+    <div [ngSwitch]="stock.code">
+      <div *ngSwitchCase="'TEL'">
+        Viva Telefónica!!!
+      </div>
+      <div *ngSwitchCase="'NAT'">
+        Eramos gas natural pero ya no
+      </div>
+      <div *ngSwitchDefault>
+        Os vais a la porra los guays
+      </div>
+    </div>
 
 
-<div class="stock-item">
-  <div class="stock-name">{{stock.name}}</div>
-  <div class="stock-code">{{stock.code}}</div>
-  <div class="stock-price"
-    [ngStyle]="{
-      'color': stock.price > stock.previousPrice ? 'green': 'red',
-      'font-weight': stock.price - stock.previousPrice > 5 ? 'bold': ''
-    }"
-    >{{stock.price}} €</div>
-  <!-- <button (click)="setFavorite()" [disabled]="stock.favorite">Add to favorites</button> -->
+    <!-- <button (click)="setFavorite()" [style]="stock.favorite ?'display: none':''">Add to favorites</button> -->
 
-  <button (click)="setFavorite()" *ngIf="!stock.favorite else fav">Add to favorites</button>
-  <!-- <button (click)="setFavorite()" [style]="stock.favorite ?'display: none':''">Add to favorites</button> -->
+    <!-- <div *ngIf="stock.favorite">*</div> -->
 
-
-  <!-- <div *ngIf="stock.favorite">*</div> -->
+  </div>
 </div>
+
+<!-- <div
+    [ngClass]="
+    {
+      subiendo: stock.isSubiendo(),
+      bajando: !stock.isSubiendo(),
+      'cambio-fuerte': stock.isCambioFuerte(),
+      'stock-price': true
+    }
+    "
+    >{{stock.price}} €</div> -->
