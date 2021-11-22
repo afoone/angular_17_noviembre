@@ -1,0 +1,8 @@
+<div class="stock-list">
+  <app-ticker *ngFor="let stock of stocks; index as i"
+    [stock]="stock"
+    [favorite]="favorites[i]"
+    (setFavorite)="setFavorite($event)"
+    ></app-ticker>
+  <app-ticker></app-ticker>
+</div>

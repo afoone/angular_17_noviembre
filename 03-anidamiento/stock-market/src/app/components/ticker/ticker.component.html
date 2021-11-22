@@ -1,0 +1,29 @@
+<ng-template #fav><div>*</div></ng-template>
+  <div class="stock-item" *ngIf="stock">
+    <div class="stock-name">{{ stock.name.toUpperCase() }}</div>
+    <div class="stock-code">{{ stock.code }}</div>
+    <div
+      [class.subiendo]=" stock.isSubiendo()"
+      [class.bajando]=" !stock.isSubiendo()"
+      class="stock-price"
+      [class.cambio-fuerte]=" stock.isCambioFuerte()"
+    >
+      {{ stock.price }} €
+    </div>
+
+    <button [disabled]="isFavorite" (click)="setFavorite(stock.code)">
+      Add to favorites
+    </button>
+
+    <div [ngSwitch]=" stock.code">
+      <div *ngSwitchCase="'TEL'">
+        Viva Telefónica!!!
+      </div>
+      <div *ngSwitchCase="'NAT'">
+        Eramos gas natural pero ya no
+      </div>
+      <div *ngSwitchDefault>
+        Os vais a la porra los guays
+      </div>
+    </div>
+  </div>
