@@ -1,0 +1,5 @@
+<div class="fotos-search">
+  <!-- <input type="text" class="form-control" [value]="search" (keypress)="onChange($event)"> -->
+  <input type="text" class="form-control" [(ngModel)]="search">
+  <button class="btn btn-primary"  (click)="onSearch()">Search</button>
+</div>

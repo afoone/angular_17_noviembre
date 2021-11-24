@@ -1,3 +1,5 @@
-<h1>fotos</h1>
-
-<imagina-fotos-list></imagina-fotos-list>
+<div class="container">
+  <h1>fotos</h1>
+  <imagina-search (search)="onSearch($event)"></imagina-search>
+  <imagina-fotos-list [search]="search"></imagina-fotos-list>
+</div>

@@ -3,5 +3,7 @@ import { Observable } from "rxjs";
 import { FotosResponse } from "../models/fotos";
 
 export interface FotosPort {
-  getFotos(): Observable<FotosResponse>
+  getFotos(search: string): Observable<FotosResponse>
+
+  moreFotos(): Observable<FotosResponse>
 }

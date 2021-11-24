@@ -5,16 +5,20 @@ import { HttpClientModule } from "@angular/common/http";
 import { AppComponent } from './app.component';
 import { FotosListComponent } from './components/fotos-list/fotos-list.component';
 import { FotosItemComponent } from './components/fotos-item/fotos-item.component';
+import { SearchComponent } from './components/search/search.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     FotosListComponent,
-    FotosItemComponent
+    FotosItemComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
