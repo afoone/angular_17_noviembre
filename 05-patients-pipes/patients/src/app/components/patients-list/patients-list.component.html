@@ -1,0 +1,25 @@
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>
+        Nombre
+      </th>
+      <th>
+        Tarifa
+      </th>
+    </tr>
+
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let patient of patients">
+      <td>{{patient.name | patientName }}</td>
+      <!-- <td>{{patient.fee | currency: "EUR":"symbol":"3.2-2"}}</td> -->
+      <!-- <td>{{patient.fee | number: ".2-2"}}</td> -->
+      <td>{{patient.fee | suma100 | number: ".2-2"}}</td>
+    </tr>
+  </tbody>
+
+</table>
+

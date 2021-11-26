@@ -1,0 +1,61 @@
+{
+  "patients": [
+    {
+      "id": 1,
+      "name": "Joe Smith",
+      "sex": "M",
+      "age": 54,
+      "fee": 32,
+      "diagnostics": [
+        "malaria",
+        "covid19"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Emilia Hart",
+      "sex": "F",
+      "fee": 23.567,
+      "age": 47,
+      "diagnostics": [
+        "covid19"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Joe Salmerón",
+      "sex": "M",
+      "age": 74,
+      "diagnostics": [
+        "malaria"
+      ]
+    },
+    {
+      "name": "Teresa Hart",
+      "sex": "F",
+      "age": 46,
+      "diagnostics": [
+        "diphteria"
+      ],
+      "id": 4
+    },
+    {
+      "name": "Teresa Hart",
+      "sex": "F",
+      "age": 46,
+      "diagnostics": [
+        "diphteria"
+      ],
+      "id": 5
+    },
+    {
+      "name": "Mercedes Benz",
+      "sex": "F",
+      "age": 46,
+      "diagnostics": [
+        "diphteria"
+      ],
+      "id": 7
+    }
+  ]
+}
