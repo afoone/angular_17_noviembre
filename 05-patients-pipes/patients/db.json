@@ -9,7 +9,8 @@
       "diagnostics": [
         "malaria",
         "covid19"
-      ]
+      ],
+      "releaseDate": "2021-11-25"
     },
     {
       "id": 2,
@@ -22,40 +23,20 @@
       ]
     },
     {
-      "id": 3,
-      "name": "Joe Salmerón",
-      "sex": "M",
-      "age": 74,
-      "diagnostics": [
-        "malaria"
-      ]
-    },
-    {
-      "name": "Teresa Hart",
-      "sex": "F",
-      "age": 46,
-      "diagnostics": [
-        "diphteria"
-      ],
-      "id": 4
-    },
-    {
-      "name": "Teresa Hart",
-      "sex": "F",
-      "age": 46,
-      "diagnostics": [
-        "diphteria"
-      ],
-      "id": 5
-    },
-    {
       "name": "Mercedes Benz",
       "sex": "F",
       "age": 46,
       "diagnostics": [
         "diphteria"
       ],
+      "releaseDate": "2021-11-06",
       "id": 7
+    },
+    {
+      "name": "",
+      "age": 33,
+      "releaseDate": "0333-03-23",
+      "id": 8
     }
   ]
 }

@@ -1,0 +1,25 @@
+<h3>
+Nuevo diagnostico
+</h3>
+<form [formGroup]="diagnosticoForm">
+  <div>
+    Code*
+    <input
+      type="text"
+      placeholder="Code"
+      formControlName="code"
+      class="form-control"
+      [class.is-invalid]="diagnosticoForm.controls['code'].errors"
+    >
+  </div>
+  <div>
+    Value*
+    <input
+      type="text"
+      placeholder="Value"
+      formControlName="value"
+      class="form-control"
+      [class.is-invalid]="diagnosticoForm.controls['value'].errors"
+    >
+  </div>
+</form>

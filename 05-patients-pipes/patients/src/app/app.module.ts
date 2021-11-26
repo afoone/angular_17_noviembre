@@ -12,6 +12,8 @@ import { AboutComponent } from './components/about/about.component';
 import { HeaderComponent } from './components/header/header.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { PatientListViewComponent } from './views/patient-list-view/patient-list-view.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { DiagnosticosComponent } from './components/diagnosticos/diagnosticos.component';
 
 @NgModule({
   declarations: [
@@ -23,12 +25,15 @@ import { PatientListViewComponent } from './views/patient-list-view/patient-list
     AboutComponent,
     HeaderComponent,
     NotFoundComponent,
-    PatientListViewComponent
+    PatientListViewComponent,
+    DiagnosticosComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

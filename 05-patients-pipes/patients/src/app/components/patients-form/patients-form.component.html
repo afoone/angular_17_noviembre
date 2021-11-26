@@ -1,1 +1,60 @@
-<p>patients-form works!</p>
+<div class="patient-form">
+  <h2 *ngIf="id">Editando paciente {{ id }}</h2>
+  <h2 *ngIf="!id">Creando paciente</h2>
+
+  <form (submit)="savePatient()">
+    <div class="form-group">
+      <label for="name">Nombre *</label>
+      <input
+        type="text"
+        class="form-control"
+        id="name"
+        placeholder="Nombre del paciente"
+        name="name"
+        #name="ngModel"
+        [(ngModel)]="patient.name"
+        required
+        minlength="4"
+      />
+      <div *ngIf="name.invalid">
+        <small *ngIf="name.errors ? name.errors['required'] : false"
+          >El campo es requerido</small
+        >
+        <small *ngIf="name.errors ? name.errors['minlength'] : false"
+          >El campo tiene que tener por lo menos cuatro caracteres</small
+        >
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="age">Edad</label>
+      <input
+        type="number"
+        class="form-control"
+        id="age"
+        name="age"
+        #age="ngModel"
+        max="99"
+        min="0"
+        [(ngModel)]="patient.age"
+      />
+      <div *ngIf="age.invalid">
+        <small>El número ha de estar entre 0 y 99</small>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="release-date"></label>
+      <input
+        type="date"
+        class="form-control"
+        id="release-date"
+        name="release-date"
+        [(ngModel)]="patient.releaseDate"
+      />
+    </div>
+
+    <input type="submit" class="btn btn-primary" value="Guardar" />
+    <input class="btn btn-warning" value="Cancelar" />
+  </form>
+</div>

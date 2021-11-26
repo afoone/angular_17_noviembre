@@ -51,3 +51,14 @@ PATCH /patients/1 ->
   }
 
 ```
+
+
+# Reactive forms
+
+- FormControl - encapsula cada input de un form
+- Validator : valida las entradas
+- Observers: observadores a los cambios en un formulario
+
+
+Formcontrol : input concreto
+

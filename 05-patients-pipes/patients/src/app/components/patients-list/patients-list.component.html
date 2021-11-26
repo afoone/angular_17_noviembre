@@ -1,25 +1,30 @@
-
 <table class="table">
   <thead>
     <tr>
-      <th>
-        Nombre
-      </th>
-      <th>
-        Tarifa
-      </th>
+      <th>Nombre</th>
+      <th>Tarifa</th>
+      <th>Fecha de alta</th>
+      <th>Edad</th>
+      <th></th>
     </tr>
-
   </thead>
 
   <tbody>
     <tr *ngFor="let patient of patients">
-      <td>{{patient.name | patientName }}</td>
+      <td>{{ patient.name | patientName }}</td>
       <!-- <td>{{patient.fee | currency: "EUR":"symbol":"3.2-2"}}</td> -->
       <!-- <td>{{patient.fee | number: ".2-2"}}</td> -->
-      <td>{{patient.fee | suma100 | number: ".2-2"}}</td>
+      <td>{{ patient.fee | suma100 | number: ".2-2" }}</td>
+      <td>{{ patient.releaseDate }}</td>
+      <td>{{ patient.age }}</td>
+      <td>
+        <a [routerLink]="'/patients/' + patient.id">
+          <button class="btn btn-primary btn-small">Editar</button>
+        </a>
+        <button class="btn btn-danger btn-small" (click)="delete(patient.id)">
+          Borrar
+        </button>
+      </td>
     </tr>
   </tbody>
-
 </table>
-
