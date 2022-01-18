@@ -10,6 +10,16 @@
         "ecmaVersion": "latest"
     },
     "rules": {
+        "no-console": [
+            "error",
+            {
+                "allow": [
+                    "warn",
+                    "error"
+                ]
+            }
+        ],
+        "constructor-super": "error",
         "indent": [
             "error",
             4
